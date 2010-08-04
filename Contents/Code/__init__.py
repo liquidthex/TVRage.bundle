@@ -12,8 +12,8 @@ class TVRageAgent(Agent.TV_Shows):
   contributes_to = ['com.plexapp.agents.thetvdb']
   
   def search(self, results, media, lang):
-    if media.primary_metadata.first_aired:
-      year = ' ' + str(media.primary_metadata.first_aired).split('-')[0]
+    if media.primary_metadata.originally_available_at:
+      year = ' ' + str(media.primary_metadata.originally_available_at).split('-')[0]
     else:
       year = ''  
     name = media.primary_metadata.name + ' ' + year

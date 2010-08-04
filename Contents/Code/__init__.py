@@ -16,7 +16,7 @@ class TVRageAgent(Agent.TV_Shows):
       year = ' ' + str(media.primary_metadata.originally_available_at).split('-')[0]
     else:
       year = ''  
-    name = media.primary_metadata.name + ' ' + year
+    name = media.primary_metadata.title + ' ' + year
     
     TVrageShowUrl = XML.ElementFromURL(TVRAGE_SEARCH % String.Quote(name.encode('utf-8'))).xpath('.//show')[0].xpath('link')[0].text
 

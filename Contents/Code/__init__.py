@@ -23,7 +23,7 @@ class TVRageAgent(Agent.TV_Shows):
     if len(TVrageShowUrl) > 0:
       results.Append(MetadataSearchResult(id = TVrageShowUrl, score = 100))
           
-  def update(self, metadata, lang):
+  def update(self, metadata, media, lang):
     # Poster.
     url = metadata.id
     try:

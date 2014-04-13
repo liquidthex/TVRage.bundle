@@ -1,4 +1,5 @@
 # Based on akkifokkusu's Wrestling Metadata Agent (https://forums.plex.tv/index.php/topic/73947-alpha-wrestling-metadata-agent/)
+import unicodedata
 
 TVRAGE_SEARCH_URL = 'http://services.tvrage.com/feeds/search.php?show=%s'
 TVRAGE_SHOW_INFO_URL = 'http://services.tvrage.com/myfeeds/showinfo.php?key=P8q4BaUCuRJPYWys3RBV&sid=%s'

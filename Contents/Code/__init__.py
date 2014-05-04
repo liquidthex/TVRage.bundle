@@ -21,8 +21,8 @@ class TVRageAgent(Agent.TV_Shows):
 	primary_provider = True
 
 	def search(self, results, media, lang):
-		if Prefs["tvrcache"]:
-			HTTP.ClearCache()
+#		if Prefs["tvrcache"]:
+#			HTTP.ClearCache()
 		Log("Working!:")
 		media.show = unicodedata.normalize('NFC', unicode(media.show)).strip()
 		Log("Show?: " + media.show)
@@ -39,8 +39,8 @@ class TVRageAgent(Agent.TV_Shows):
 			curscore = curscore - 1
 
 	def update(self, metadata, media, lang):
-		if Prefs["tvrcache"]:
-			HTTP.ClearCache()
+#		if Prefs["tvrcache"]:
+#			HTTP.ClearCache()
 		Log("Working!:")
 		Log(metadata.id)
 		tvrxml = XML.ElementFromURL(TVRAGE_SHOW_INFO_URL % metadata.id)
